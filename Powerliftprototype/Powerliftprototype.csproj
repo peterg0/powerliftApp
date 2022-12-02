@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7555F7B2-2379-41F9-BA37-46B20AE909C7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Powerliftprototype</RootNamespace>
+    <AssemblyName>Powerliftprototype</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TextBoxNumbers">
+      <HintPath>..\..\..\..\Downloads\TextBoxNumbersDLL\TextBoxNumbers.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Form1Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1Login.Designer.cs">
+      <DependentUpon>Form1Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2ManageCycles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2ManageCycles.Designer.cs">
+      <DependentUpon>Form2ManageCycles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form7.Designer.cs">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MesoBtn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MesoBtn.Designer.cs">
+      <DependentUpon>MesoBtn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MesocycleOverviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MesocycleOverviewForm.Designer.cs">
+      <DependentUpon>MesocycleOverviewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControllCycleOverview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControllCycleOverview.Designer.cs">
+      <DependentUpon>UserControllCycleOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControlSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSettings.Designer.cs">
+      <DependentUpon>UserControlSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlRegister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlRegister.Designer.cs">
+      <DependentUpon>UserControlRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlWeekOverview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlWeekOverview.Designer.cs">
+      <DependentUpon>UserControlWeekOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlWorkout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlWorkout.Designer.cs">
+      <DependentUpon>UserControlWorkout.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1Login.resx">
+      <DependentUpon>Form1Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2ManageCycles.resx">
+      <DependentUpon>Form2ManageCycles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form7.resx">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MesoBtn.resx">
+      <DependentUpon>MesoBtn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MesocycleOverviewForm.resx">
+      <DependentUpon>MesocycleOverviewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControllCycleOverview.resx">
+      <DependentUpon>UserControllCycleOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UserControlSettings.resx">
+      <DependentUpon>UserControlSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlRegister.resx">
+      <DependentUpon>UserControlRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlWeekOverview.resx">
+      <DependentUpon>UserControlWeekOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlWorkout.resx">
+      <DependentUpon>UserControlWorkout.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
