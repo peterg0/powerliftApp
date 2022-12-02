@@ -39,6 +39,7 @@ namespace Powerliftprototype
 			this.userControllCycleOverview1.Name = "userControllCycleOverview1";
 			this.userControllCycleOverview1.Size = new System.Drawing.Size(370, 338);
 			this.userControllCycleOverview1.TabIndex = 0;
+			this.userControllCycleOverview1.Load += new System.EventHandler(this.userControllCycleOverview1_Load);
 			// 
 			// userControlWeekOverview1
 			// 

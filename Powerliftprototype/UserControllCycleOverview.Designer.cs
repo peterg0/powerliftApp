@@ -36,11 +36,13 @@ namespace Powerliftprototype
 			this.week3btn = new System.Windows.Forms.Button();
 			this.week2btn = new System.Windows.Forms.Button();
 			this.week4btn = new System.Windows.Forms.Button();
+			this.label1 = new System.Windows.Forms.Label();
 			this.MesocyclePanel.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// MesocyclePanel
 			// 
+			this.MesocyclePanel.Controls.Add(this.label1);
 			this.MesocyclePanel.Controls.Add(this.week1btn);
 			this.MesocyclePanel.Controls.Add(this.button2);
 			this.MesocyclePanel.Controls.Add(this.label2);
@@ -110,6 +112,15 @@ namespace Powerliftprototype
 			this.week4btn.Text = "week 4";
 			this.week4btn.UseVisualStyleBackColor = true;
 			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(15, 19);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(91, 13);
+			this.label1.TabIndex = 14;
+			this.label1.Text = "label1label1label1";
+			// 
 			// UserControllCycleOverview
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,5 +143,6 @@ namespace Powerliftprototype
 		private System.Windows.Forms.Button week3btn;
 		private System.Windows.Forms.Button week2btn;
 		private System.Windows.Forms.Button week4btn;
+		private System.Windows.Forms.Label label1;
 	}
 }

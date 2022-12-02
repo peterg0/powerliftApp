@@ -12,23 +12,20 @@ namespace Powerliftprototype
 {
 	public partial class UserControlSettings : UserControl
 	{
-		public UserAccount currentUser { get; set; }
-		public UserMaxes currentUser_maxes { get; set; }
+		public UserAccount currentUser_in_Settings { get; set; }
 		public UserControlSettings()
 		{
 			InitializeComponent();
 		}
 
-
+		public void SetCurrentUser(UserAccount currentUser) { currentUser_in_Settings = currentUser; }
 
 		private void Confirmbtn_Click(object sender, EventArgs e)
 		{
-			
-
-			currentUser.userMaxes.OneRepMaxSquat = int.Parse(squat_txtbox.Text);
-			currentUser.userMaxes.OneRepMaxBench = int.Parse(bench_txtbox.Text);
-			currentUser.userMaxes.OneRepMaxDeadlift = int.Parse(deadlift_txtbox.Text);
-			currentUser.userMaxes.OneRepMaxOHP = int.Parse(ohp_txtbox.Text);
+			currentUser_in_Settings.userMaxes.OneRepMaxSquat = int.Parse(squat_txtbox.Text);
+			currentUser_in_Settings.userMaxes.OneRepMaxBench = int.Parse(bench_txtbox.Text);
+			currentUser_in_Settings.userMaxes.OneRepMaxDeadlift = int.Parse(deadlift_txtbox.Text);
+			currentUser_in_Settings.userMaxes.OneRepMaxOHP = int.Parse(ohp_txtbox.Text);
 
 			SendToBack();
 		}
@@ -57,7 +54,7 @@ namespace Powerliftprototype
 		//calculator weights textbox change handler
 		private void calc_weightTextBox_TextChanged(object sender, EventArgs e)
 		{
-			setButtonVisibility();
+			
 		}
 
 		//calculator reps textbox change handler

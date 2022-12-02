@@ -7,36 +7,38 @@ using System.Threading.Tasks;
 namespace Powerliftprototype
 {
 
-	public static class ballsstatic
-	{
-		public static string ballsstring = "balls";
-	}
 	public class UserAccount
 	{
-		
+
 		public string Username { get; set; }    //username
 		public string Password { get; set; }    //pass
 		public int UserID { get; set; }         //unique userID
 
-
-
-		public Mesocycle[] mesocyclesArray; //stores the user's past and current mesocycles
+		public Mesocycle[] mesocyclesArray = { }; //stores the user's past and current mesocycles
 
 		public UserMaxes userMaxes; //userAccount has a userMaxes
 
 		//constructor--- username, password
 
-
+		public int getMesoID(Mesocycle mesocycle)
+		{
+			return mesocycle.mesoID;
+		}
 		public UserAccount(string username, string password)
 		{
-			Username = username;
-			Password = password;
+			this.Username = username;
+			this.Password = password;
+
+			userMaxes = new UserMaxes();
 		}
 
 		//convert mesocycle array to list, add a new mesocycle, convert back to array and return the array
-		private Mesocycle[] createMesocycle(UserMaxes maxes)
+		public void createMesocycle()
 		{
-			return mesocyclesArray;
+			List<Mesocycle> mesocycleList = mesocyclesArray.ToList();
+			mesocycleList.Add(new Mesocycle());
+			mesocycleList.ToArray();
+
 		}
 	}
 
@@ -48,64 +50,55 @@ namespace Powerliftprototype
 		public int OneRepMaxDeadlift { get; set; }
 		public int OneRepMaxOHP { get; set; }
 
+		public int TMaxSquat { get; set; }
+		public int TMaxBench { get; set; }
+		public int TMaxDeadlift { get; set; }
+		public int TMaxOHP { get; set; }
+
 		private Mesocycle mesocycle; //UserMaxes has a mesocycle associated with it
 
 
 		//constructor
-		public UserMaxes(int oneRepMaxSquat, int oneRepMaxBench, int oneRepMaxDeadlift, int oneRepMaxOHP)
+		public UserMaxes()
 		{
-			OneRepMaxSquat = oneRepMaxSquat;
-			OneRepMaxBench = oneRepMaxBench;
-			OneRepMaxDeadlift = oneRepMaxDeadlift;
-			OneRepMaxOHP = oneRepMaxOHP;
+			
 		}
 
 		//functions to calculate the training max (90% of one rep max) of each lift
-		public int calculateTMax_Squat(int orm)
+		public int SetTMax(int orm)
 		{
-			orm = OneRepMaxSquat;
-			orm = (int)(orm * 0.9);
-			return orm;
+			decimal d;
+			d = (int)(orm * 0.9);
+			d = Math.Round(d / 5) * 5;
+
+			return (int)d;
 		}
-		public int calculateTMax_Bench(int orm)
-		{
-			orm = OneRepMaxBench;
-			orm = (int)(orm * 0.9);
-			return orm;
-		}
-		public int calculateTMax_Deadlift(int orm)
-		{
-			orm = OneRepMaxDeadlift;
-			orm = (int)(orm * 0.9);
-			return orm;
-		}
-		public int calculateTMax_OHP(int orm)
-		{
-			orm = OneRepMaxOHP;
-			orm = (int)(orm * 0.9);
-			return orm;
-		}
+
 	}
 	public class Mesocycle
 	{
 
 		public bool isCompleted { get; set; }       //variable to check if mesocycle has been completed
 
+		public int mesoID { get; set; }
+
 		public UserMaxes maxes;                     //Mesocycle has a usermax associated with it
 
-		//composition, create 4 microcycle objects
-		static Microcycle week1 = new Microcycle(1);
-		static Microcycle week2 = new Microcycle(2);
-		static Microcycle week3 = new Microcycle(3);
-		static Microcycle week4 = new Microcycle(4);
+	
+		
 
-		private Microcycle[] microcycles = new Microcycle[] { week1, week2, week3, week4 }; //array to store each week
+		//private Microcycle[] microcycles = new Microcycle[] { week1, week2, week3, week4 }; //array to store each week
 
 		//constructor
-		public Mesocycle(UserMaxes maxes)
+		public Mesocycle()
 		{
-			this.maxes = maxes;
+			 Microcycle week1 = new Microcycle();
+			 Microcycle week2 = new Microcycle();
+			 Microcycle week3 = new Microcycle();
+			 Microcycle week4 = new Microcycle();
 		}
+
+
 
 		//check if all 4 microcycles are completed
 		public void MicrocyclesCompleted()
@@ -122,17 +115,17 @@ namespace Powerliftprototype
 
 
 		//each microcycle(each week) has 4 trainingDays
-		static TrainingDay day1 = new TrainingDay(1, "Squat");
-		static TrainingDay day2 = new TrainingDay(2, "Bench");
-		static TrainingDay day3 = new TrainingDay(3, "Deadlift");
-		static TrainingDay day4 = new TrainingDay(4, "OHP");
+	
 
-		private TrainingDay[] trainingday = new TrainingDay[] { day1, day2, day3, day4 };//array to store the 4 training days
+	//	private TrainingDay[] trainingday = new TrainingDay[] { day1, day2, day3, day4 };//array to store the 4 training days
 
 		//constructor
-		public Microcycle(int weekNumber)
+		public Microcycle()
 		{
-			WeekNumber = weekNumber;
+			TrainingDay day1 = new TrainingDay(1, "Squat");
+			TrainingDay day2 = new TrainingDay(2, "Bench");
+			TrainingDay day3 = new TrainingDay(3, "Deadlift");
+			TrainingDay day4 = new TrainingDay(4, "OHP");
 		}
 	}
 

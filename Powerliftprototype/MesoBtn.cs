@@ -13,8 +13,9 @@ namespace Powerliftprototype
 	public partial class MesoBtn : UserControl
 	{
 		MesocycleOverviewForm form = new MesocycleOverviewForm();
-		public UserAccount currentuser { get; set; }
-		public UserMaxes currentUser_maxes { get; set; }
+		public UserAccount currentuserMesoBtn { get; set; }
+		public Mesocycle currentuserMeso { get; set; }
+		public void SetCurrentUser(UserAccount currentUser) { currentuserMesoBtn = currentUser; }
 
 		public MesoBtn()
 		{
@@ -28,8 +29,8 @@ namespace Powerliftprototype
 
 		private void MesoBtn_Load(object sender, EventArgs e)
 		{
-			MesocycleBtn.Text = "Mesocycle";
-
+			form.SetCurrentUser(currentuserMesoBtn);
+			MesocycleBtn.Text = "Mesocycle ";
 		}
 	}
 }

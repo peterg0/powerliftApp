@@ -17,8 +17,10 @@ namespace Powerliftprototype
 		//Dictionary<string, string> credentials = new Dictionary<string, string>(); //this dicitonary will store user credentials
 		//readonly string[] usernames = File.ReadAllLines("username.txt");
 		//readonly string[] passwords = File.ReadAllLines("password.txt");
-		Form2ManageCycles form3 = new Form2ManageCycles();
-		public UserAccount currentuser { get; set; }
+		
+		private UserAccount currentuserForm1 { get; set; }
+
+		private Form2ManageCycles form2;
 		
 		public Form1Login()
 		{
@@ -29,8 +31,6 @@ namespace Powerliftprototype
 		{
 			loginPanel.Visible = false;
 			signUpPanel.Visible = true;
-			usernameTextBox.Text = ballsstatic.ballsstring;
-
 		}
 
 		private void button4_Click(object sender, EventArgs e)
@@ -41,14 +41,16 @@ namespace Powerliftprototype
 
 		private void button1_Click_1(object sender, EventArgs e)
 		{
-			
-			this.Close();
-			form3.Show();
+			currentuserForm1 = new UserAccount("Guest", "12345");
+			Console.WriteLine("Logged in as: "+currentuserForm1.Username + " " + currentuserForm1.Password);
+		
+			form2 = new Form2ManageCycles();
+			form2.SetCurrentUser(currentuserForm1);
 
-			currentuser = new UserAccount("Guest", "12345");
-
-			DialogResult result = MessageBox.Show("Logged in as " + currentuser.Username + " " + currentuser.Password, "errorbitch", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			this.Hide();
+			form2.Show();
 		}
+
 
 		private void confirmSignUpButton_Click(object sender, EventArgs e)
 		{
