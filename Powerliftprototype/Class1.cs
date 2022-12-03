@@ -14,7 +14,7 @@ namespace Powerliftprototype
 		public string Password { get; set; }    //pass
 		public int UserID { get; set; }         //unique userID
 
-		public Mesocycle[] mesocyclesArray = { }; //stores the user's past and current mesocycles
+		public List<Mesocycle> mesocycleList = new List<Mesocycle>(); //stores the user's past and current mesocycles
 
 		public UserMaxes userMaxes; //userAccount has a userMaxes
 
@@ -35,9 +35,11 @@ namespace Powerliftprototype
 		//convert mesocycle array to list, add a new mesocycle, convert back to array and return the array
 		public void createMesocycle()
 		{
-			List<Mesocycle> mesocycleList = mesocyclesArray.ToList();
 			mesocycleList.Add(new Mesocycle());
-			mesocycleList.ToArray();
+
+			foreach (Mesocycle c in mesocycleList){
+			c.mesoID = mesocycleList.IndexOf(c);
+			}
 
 		}
 	}

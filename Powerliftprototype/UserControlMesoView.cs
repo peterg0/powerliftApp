@@ -10,21 +10,17 @@ using System.Windows.Forms;
 
 namespace Powerliftprototype
 {
-	public partial class UserControllCycleOverview : UserControl
+	public partial class UserControlMesoView : UserControl
 	{
-		public UserControllCycleOverview()
+
+		public UserControlMesoView()
 		{
 			InitializeComponent();
 		}
 
-		private void button2_Click(object sender, EventArgs e)
+		private void MesocyclePanel_Paint(object sender, PaintEventArgs e)
 		{
-			ParentForm.Hide();
-		}
 
-		private void week1btn_Click(object sender, EventArgs e)
-		{
-			
 		}
 	}
 }

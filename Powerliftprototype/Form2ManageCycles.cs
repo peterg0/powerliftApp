@@ -34,16 +34,18 @@ namespace Powerliftprototype
 
 		private void createNewMesoButton()
 		{
-			
+
+			int n=0;
 			CycleTablePanel.RowStyles.Add(new RowStyle(SizeType.Percent));
 			CycleTablePanel.RowCount++;
 			foreach (Control c in CycleTablePanel.Controls)
 			{
-				
+				n++;
 				CycleTablePanel.SetRow(c, CycleTablePanel.GetRow(c) + 1);
 			}
 
-			CycleTablePanel.Controls.Add(new MesoBtn() {Anchor = AnchorStyles.Top }, 0, 0);
+			CycleTablePanel.Controls.Add(new MesoBtn() { Anchor = AnchorStyles.Top, MesoBtnID = n , currentuserMesoBtn=currentuserForm2}, 0, 0);
+
 		}
 
 

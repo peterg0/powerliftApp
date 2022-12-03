@@ -62,6 +62,12 @@
     <Compile Include="Form2ManageCycles.Designer.cs">
       <DependentUpon>Form2ManageCycles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form3MesocycleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3MesocycleView.Designer.cs">
+      <DependentUpon>Form3MesocycleView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form6.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,20 +86,14 @@
     <Compile Include="MesoBtn.Designer.cs">
       <DependentUpon>MesoBtn.cs</DependentUpon>
     </Compile>
-    <Compile Include="MesocycleOverviewForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MesocycleOverviewForm.Designer.cs">
-      <DependentUpon>MesocycleOverviewForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControllCycleOverview.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControllCycleOverview.Designer.cs">
-      <DependentUpon>UserControllCycleOverview.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControlMesoView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlMesoView.Designer.cs">
+      <DependentUpon>UserControlMesoView.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlSettings.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -124,6 +124,9 @@
     <EmbeddedResource Include="Form2ManageCycles.resx">
       <DependentUpon>Form2ManageCycles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form3MesocycleView.resx">
+      <DependentUpon>Form3MesocycleView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form6.resx">
       <DependentUpon>Form6.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,12 +135,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MesoBtn.resx">
       <DependentUpon>MesoBtn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MesocycleOverviewForm.resx">
-      <DependentUpon>MesocycleOverviewForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControllCycleOverview.resx">
-      <DependentUpon>UserControllCycleOverview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -148,6 +145,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControlMesoView.resx">
+      <DependentUpon>UserControlMesoView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlSettings.resx">
       <DependentUpon>UserControlSettings.cs</DependentUpon>
     </EmbeddedResource>

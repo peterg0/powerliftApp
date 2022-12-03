@@ -26,8 +26,6 @@ C:\Users\peter\source\repos\Powerliftprototype\powerliftApp\powerliftApp\Powerli
 C:\Users\peter\source\repos\Powerliftprototype\powerliftApp\powerliftApp\Powerliftprototype\obj\Debug\Powerliftprototype.Form6.resources
 C:\Users\peter\source\repos\Powerliftprototype\powerliftApp\powerliftApp\Powerliftprototype\obj\Debug\Powerliftprototype.Form7.resources
 C:\Users\peter\source\repos\Powerliftprototype\powerliftApp\powerliftApp\Powerliftprototype\obj\Debug\Powerliftprototype.MesoBtn.resources
-C:\Users\peter\source\repos\Powerliftprototype\powerliftApp\powerliftApp\Powerliftprototype\obj\Debug\Powerliftprototype.MesocycleOverviewForm.resources
-C:\Users\peter\source\repos\Powerliftprototype\powerliftApp\powerliftApp\Powerliftprototype\obj\Debug\Powerliftprototype.UserControllCycleOverview.resources
 C:\Users\peter\source\repos\Powerliftprototype\powerliftApp\powerliftApp\Powerliftprototype\obj\Debug\Powerliftprototype.Properties.Resources.resources
 C:\Users\peter\source\repos\Powerliftprototype\powerliftApp\powerliftApp\Powerliftprototype\obj\Debug\Powerliftprototype.UserControlSettings.resources
 C:\Users\peter\source\repos\Powerliftprototype\powerliftApp\powerliftApp\Powerliftprototype\obj\Debug\Powerliftprototype.SignUpControl.resources
@@ -41,3 +39,5 @@ C:\Users\peter\source\repos\Powerliftprototype\powerliftApp\powerliftApp\Powerli
 C:\Users\peter\source\repos\Powerliftprototype\powerliftApp\powerliftApp\Powerliftprototype\bin\Debug\Powerliftprototype.exe
 C:\Users\peter\source\repos\Powerliftprototype\powerliftApp\powerliftApp\Powerliftprototype\bin\Debug\Powerliftprototype.pdb
 C:\Users\peter\source\repos\Powerliftprototype\powerliftApp\powerliftApp\Powerliftprototype\obj\Debug\Powerliftprototype.csproj.CopyComplete
+C:\Users\peter\source\repos\Powerliftprototype\powerliftApp\powerliftApp\Powerliftprototype\obj\Debug\Powerliftprototype.Form3MesocycleView.resources
+C:\Users\peter\source\repos\Powerliftprototype\powerliftApp\powerliftApp\Powerliftprototype\obj\Debug\Powerliftprototype.UserControlMesoView.resources
