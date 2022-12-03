@@ -12,7 +12,7 @@ namespace Powerliftprototype
 {
 	public partial class MesoBtn : UserControl
 	{
-		Form3MesocycleView form3 = new Form3MesocycleView();
+		
 		public UserAccount currentuserMesoBtn { get; set; }
 		public Mesocycle currentUsers_Mesocycle { get; set; }
 		public int MesoBtnID { get; set; }
@@ -26,6 +26,7 @@ namespace Powerliftprototype
 
 		private void MesocycleBtn_Click(object sender, EventArgs e)
 		{
+			Form3MesocycleView form3 = new Form3MesocycleView();
 			//clicking on mesocycle button will bring forward the associated MesocycleOverviewForm
 			form3.Show();
 			Console.WriteLine("Current User is: " + currentuserMesoBtn.Username); //for debugging

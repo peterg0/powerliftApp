@@ -15,13 +15,18 @@ namespace Powerliftprototype
 		public UserAccount currentUser { get; set; }
 		public Mesocycle currentUser_Mesocycle { get; set; }
 
+		UserControlWeekOverview week1 = new UserControlWeekOverview();
+		UserControlWeekOverview week2 = new UserControlWeekOverview();
+		UserControlWeekOverview week3 = new UserControlWeekOverview();
+		UserControlWeekOverview week4 = new UserControlWeekOverview();
+
 		public void SetCurrentUser(UserAccount u) { currentUser = u; }
 		public void SetCurrentCycle(Mesocycle m) { currentUser_Mesocycle = m; }
 		public UserControlMesoView()
 		{
 			InitializeComponent();
 
-		
+			
 		}
 
 
@@ -29,7 +34,36 @@ namespace Powerliftprototype
 		private void button2_Click(object sender, EventArgs e)
 		{
 		ParentForm.Hide();
-		MesoTitle.Text = currentUser_Mesocycle.mesoID.ToString();
+		
+		}
+
+		private void MesocyclePanel_Paint(object sender, PaintEventArgs e)
+		{
+			MesoTitle.Text = "Mesocycle "+ (currentUser_Mesocycle.mesoID+1).ToString();
+		}
+
+		private void week1btn_Click(object sender, EventArgs e)
+		{
+			
+			week1.BringToFront();
+		}
+
+		private void week2btn_Click(object sender, EventArgs e)
+		{
+			
+			week2.BringToFront();
+		}
+
+		private void week3btn_Click(object sender, EventArgs e)
+		{
+			
+			week3.BringToFront();
+		}
+
+		private void week4btn_Click(object sender, EventArgs e)
+		{
+			
+			week4.BringToFront();
 		}
 	}
 }

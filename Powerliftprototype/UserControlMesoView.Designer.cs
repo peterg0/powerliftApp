@@ -51,6 +51,7 @@ namespace Powerliftprototype
 			this.MesocyclePanel.Name = "MesocyclePanel";
 			this.MesocyclePanel.Size = new System.Drawing.Size(433, 419);
 			this.MesocyclePanel.TabIndex = 16;
+			this.MesocyclePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MesocyclePanel_Paint);
 			// 
 			// week1btn
 			// 
@@ -60,6 +61,7 @@ namespace Powerliftprototype
 			this.week1btn.TabIndex = 8;
 			this.week1btn.Text = "week 1";
 			this.week1btn.UseVisualStyleBackColor = true;
+			
 			// 
 			// button2
 			// 
@@ -89,6 +91,7 @@ namespace Powerliftprototype
 			this.week3btn.TabIndex = 12;
 			this.week3btn.Text = "week 3";
 			this.week3btn.UseVisualStyleBackColor = true;
+			
 			// 
 			// week2btn
 			// 
@@ -98,6 +101,7 @@ namespace Powerliftprototype
 			this.week2btn.TabIndex = 9;
 			this.week2btn.Text = "week 2";
 			this.week2btn.UseVisualStyleBackColor = true;
+			
 			// 
 			// week4btn
 			// 
@@ -107,6 +111,7 @@ namespace Powerliftprototype
 			this.week4btn.TabIndex = 11;
 			this.week4btn.Text = "week 4";
 			this.week4btn.UseVisualStyleBackColor = true;
+		
 			// 
 			// UserControlMesoView
 			// 

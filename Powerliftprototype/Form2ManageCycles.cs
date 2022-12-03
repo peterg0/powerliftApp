@@ -35,7 +35,7 @@ namespace Powerliftprototype
 		private void createNewMesoButton()
 		{
 
-			int n=1;
+			int n=0;
 			CycleTablePanel.RowStyles.Add(new RowStyle(SizeType.Percent));
 			CycleTablePanel.RowCount++;
 			foreach (Control c in CycleTablePanel.Controls)
