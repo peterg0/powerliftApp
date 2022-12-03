@@ -51,7 +51,6 @@ namespace Powerliftprototype
 			this.MesocyclePanel.Name = "MesocyclePanel";
 			this.MesocyclePanel.Size = new System.Drawing.Size(433, 419);
 			this.MesocyclePanel.TabIndex = 16;
-			this.MesocyclePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MesocyclePanel_Paint);
 			// 
 			// week1btn
 			// 
@@ -70,6 +69,7 @@ namespace Powerliftprototype
 			this.button2.TabIndex = 13;
 			this.button2.Text = "Back";
 			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// MesoTitle
 			// 
